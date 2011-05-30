@@ -2,6 +2,10 @@ module ActsAsFerret
   if defined?(BasicObject)
     # Ruby 1.9.x
     class BlankSlate < BasicObject
+      class << self
+        def reveal(name)
+        end
+      end
     end
   elsif defined?(BlankSlate)
     # Rails 2.x has it already
